@@ -4,3 +4,4 @@ python-dotenv
 pyaiodl
 hachoir
 ffmpeg-python
+requests
