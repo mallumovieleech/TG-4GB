@@ -3,7 +3,7 @@ import asyncio
 from pyaiodl import Downloader
 from bot import Config, LOGGER
 from pyrogram.errors import MessageNotModified
-from bot.helpers.file_upload import pyro_upload
+from bot.helpers.pyro_upload import pyro_upload
 from bot.helpers.storage_clean import clean_up
 from bot.helpers.display_progress import progress_for_aiodl
 
