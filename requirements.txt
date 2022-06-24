@@ -1,3 +1,6 @@
 pyrogram
 tgcrypto
 python-dotenv
+pyaiodl
+hachoir
+ffmpeg-python
