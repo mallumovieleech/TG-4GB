@@ -1,6 +1,6 @@
 import os
 import time
-from bot import LOGGER, Config
+from bot import LOGGER, Config, USER
 from hachoir.parser import createParser
 from hachoir.metadata import extractMetadata
 from bot.helpers.media_tools import generate_thumbnail
@@ -29,7 +29,7 @@ async def pyro_upload(bot, update, file_path, filename, s_vid,\
             duration = metadata.get("duration").seconds
         width = 1280
         height = 720
-        s_msg = await bot.send_video(
+        s_msg = await USER.send_video(
             chat_id=update.chat.id,
             video=file_path,
             duration=duration,
@@ -52,7 +52,7 @@ async def pyro_upload(bot, update, file_path, filename, s_vid,\
                 chat_id=Config.LOG_CHANNEL_ID
             )
     elif filename.endswith(photo_files) and s_pht:
-        s_msg = await bot.send_photo(
+        s_msg = await USER.send_photo(
             chat_id=update.chat.id,
             photo=file_path,
             caption=filename,
@@ -70,7 +70,7 @@ async def pyro_upload(bot, update, file_path, filename, s_vid,\
                 chat_id=Config.LOG_CHANNEL_ID
             )
     else:
-        s_msg = await bot.send_document(
+        s_msg = await USER.send_document(
             chat_id=update.chat.id,
             document=file_path,
             caption=filename,

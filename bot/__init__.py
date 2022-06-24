@@ -17,9 +17,9 @@ class CMD(object):
     HELP = ["help", f"help@{bot}"]
     UPLOAD = ["upload", f"upload@{bot}"]
 
-"""USER = Client(
+USER = Client(
     name="PremiumUjer",
     session_string=Config.USER_SESSION,
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH
-)"""
+)

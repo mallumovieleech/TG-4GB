@@ -1,6 +1,6 @@
 import os
 from pyrogram import Client
-from bot import Config, LOGGER
+from bot import Config, LOGGER, USER
 
 plugins = dict(
     root="bot/modules"
@@ -19,13 +19,13 @@ class Bot(Client):
 
     async def start(self):
         await super().start()
-        #await USER.start()
+        await USER.start()
         LOGGER.info("Bot Started...... Now Enjoy")
 
     async def stop(self, *args):
         await super().stop()
         LOGGER.info('Exiting User........')
-        #await USER.stop()
+        await USER.stop()
         LOGGER.info('Bot and User Exited Successfully ! Bye..........')
 
 if __name__ == "__main__":

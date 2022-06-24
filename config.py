@@ -30,6 +30,9 @@ class Config(object):
     WORK_DIR = getenv("WORK_DIR", "./bot/")
     DOWNLOADS_FOLDER = getenv("DOWNLOADS_FOLDER", "DOWNLOADS")
     DOWNLOAD_BASE_DIR = WORK_DIR + DOWNLOADS_FOLDER
+
+    ALLOW_DUMP = getenv("ALLOW_DUMP", None)
+    LOG_CHANNEL_ID = int(getenv("LOG_CHANNEL_ID", 123))
     
     BOT_USERNAME = getenv("BOT_USERNAME", "")
     if not BOT_USERNAME:
