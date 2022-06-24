@@ -42,7 +42,7 @@ async def pyro_upload(bot, update, file_path, filename, s_vid,\
             progress=progress_for_pyrogram,
             reply_to_message_id=reply_to_id,
             progress_args=(
-                lang.INIT_UPLOAD_FILE,
+                "Trying to upload file...",
                 init_msg,
                 start_time
             )
@@ -60,7 +60,7 @@ async def pyro_upload(bot, update, file_path, filename, s_vid,\
             disable_notification=True,
             reply_to_message_id=reply_to_id,
             progress_args=(
-                lang.INIT_UPLOAD_FILE,
+                "Trying to upload file...",
                 init_msg,
                 start_time
             )
@@ -78,7 +78,7 @@ async def pyro_upload(bot, update, file_path, filename, s_vid,\
             progress=progress_for_pyrogram,
             reply_to_message_id=reply_to_id,
             progress_args=(
-                lang.INIT_UPLOAD_FILE,
+                "Trying to upload file...",
                 init_msg,
                 start_time
             )

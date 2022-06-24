@@ -20,8 +20,7 @@ async def file_dl(bot, update, link, init_msg, reply_to_id, \
             status_msg = await bot.edit_message_text(
                 chat_id=update.chat.id,
                 text=detail_msg,
-                message_id=init_msg.id,
-                parse_mode="html"
+                message_id=init_msg.id
             )
         except MessageNotModified:
             pass
